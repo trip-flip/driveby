@@ -141,7 +141,9 @@ pub fn reset_counter() {
 
 #[cfg(test)]
 mod tests {
-    use super::pass;
+    use rand::{thread_rng, Rng};
+    use super::*;
+
     #[test]
     fn pass_default() {
         pass!();
@@ -168,5 +170,15 @@ mod tests {
         pass!(one);
         pass!(two);
         pass!(three);
+    }
+
+    #[test]
+    fn test_helpers() {
+        reset_counter();
+        let r: usize = thread_rng().gen_range(0..1000);
+        for _ in 0..r {
+            increment();
+        }
+        assert_eq!(r, current_count());
     }
 }
