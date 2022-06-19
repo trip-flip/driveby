@@ -133,6 +133,12 @@ pub fn current_count() -> usize {
     unsafe { COUNTER }
 }
 
+
+/// Resets the counter back to 0.
+pub fn reset_counter() {
+    unsafe { COUNTER = 0 }
+}
+
 #[cfg(test)]
 mod tests {
     use super::pass;
