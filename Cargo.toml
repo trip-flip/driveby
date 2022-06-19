@@ -11,3 +11,6 @@ repository = "https://github.com/trip-flip/driveby"
 
 [dev-dependencies]
 rand = "0.8.5"
+
+[lib]
+doctest = false
