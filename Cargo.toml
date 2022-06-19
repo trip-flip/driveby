@@ -1,7 +1,11 @@
 [package]
 name = "driveby"
+description = "Debug counter for Rust"
 version = "1.0.0"
 edition = "2021"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/trip-flip/driveby"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
