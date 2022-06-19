@@ -81,17 +81,17 @@ pass!(num);
 #[macro_export]
 macro_rules! pass {
     () => {
-        let n = increment();
+        let n = crate::increment();
         eprintln!("[Pass {}][Line {}]", n, line!());
     };
 
     ($mess:literal) => {
-        let n = increment();
+        let n = crate::increment();
         eprintln!("[Pass {}][Line {}] {}", n, line!(), $mess);
     };
 
     ($mess:ident) => {
-        let n = increment();
+        let n = crate::increment();
         eprintln!("[Pass {}][Line {}] {}", n, line!(), $mess);
     }
 }
@@ -135,7 +135,7 @@ pub fn current_count() -> usize {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::pass;
     #[test]
     fn pass_default() {
         pass!();
