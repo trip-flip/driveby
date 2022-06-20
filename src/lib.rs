@@ -16,11 +16,11 @@ pass!(); // Stderr: [<count>][<line_number>]
 You can pass a literal to have it printed:
 
 ```rust
-// Stderr: [<count>][<line_number] Special message
+// Stderr: [<count>][<line_number>] Special message
 pass!("Special message");
-// Stderr: [<count>][<line_number] a
+// Stderr: [<count>][<line_number>] a
 pass!('a');
-// Stderr: [<count>][<line_number] 5999999
+// Stderr: [<count>][<line_number>] 5999999
 pass(5999999);
 ```
 
@@ -29,9 +29,9 @@ You can pass a variable with the [`Display`] trait too:
 ```rust
 let hw = String::from("Hello world");
 let num = 5;
-// Stderr: [<count>][<line_number] Hello world
+// Stderr: [<count>][<line_number>] Hello world
 pass!(hw);
-// Stderr: [<count>][<line_number] 5
+// Stderr: [<count>][<line_number>] 5
 pass!(num);
 ```
 
@@ -57,11 +57,11 @@ pass!(); // Stderr: [<count>][<line_number>]
 You can pass a literal to have it printed:
 
 ```rust
-// Stderr: [<count>][<line_number] Special message
+// Stderr: [<count>][<line_number>] Special message
 pass!("Special message");
-// Stderr: [<count>][<line_number] a
+// Stderr: [<count>][<line_number>] a
 pass!('a');
-// Stderr: [<count>][<line_number] 5999999
+// Stderr: [<count>][<line_number>] 5999999
 pass(5999999);
 ```
 
